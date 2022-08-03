@@ -1,1 +1,1 @@
-# mighty-wombats
+# VMFA-117 MIGHTY WOMBATS
