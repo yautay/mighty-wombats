@@ -10,10 +10,13 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+@import "src/scss/layout";
+
 body {
-  width: 100vw;
-  height: 84vh;
+  width: auto;
+  padding-top: $header_height;
+  padding-bottom: $footer_height;
   background-color: #d8c4f3;
   display: flex;
   justify-content: center;

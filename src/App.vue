@@ -18,7 +18,6 @@ export default {
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,700;1,900&display=swap');
-
 * {
   box-sizing: border-box;
 }

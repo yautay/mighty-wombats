@@ -1,5 +1,8 @@
 <template>
   <header>
+    <div id="wombat_logo">
+      <WombatLogo></WombatLogo>
+    </div>
     <nav>
       <h1>
         <router-link to="/">VFMA 117 "MIGHTY WOMBATS"</router-link>
@@ -32,15 +35,22 @@
 </template>
 
 <script>
+import WombatLogo from "@/components/elements/WombatLogo";
 export default {
-  name: "TheHeader"
+  name: "TheHeader",
+  components: {WombatLogo}
+
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+@import "src/scss/layout";
+
 header {
   width: 100vw;
-  height: 10vh;
+  height: $header_height;
+  position: fixed;
+  top: 0;
   background-color: #3d008d;
   display: flex;
   justify-content: center;
@@ -95,5 +105,9 @@ header ul {
 
 li {
   margin: 0 0.5rem;
+}
+
+#wombat_logo {
+  height: 100%;
 }
 </style>

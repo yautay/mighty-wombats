@@ -10,10 +10,14 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+@import "src/scss/layout";
+
 footer {
   width: 100vw;
-  height: 6vh;
+  height: $footer_height;
+  position: fixed;
+  bottom: 0;
   background-color: #3d008d;
   display: flex;
   justify-content: center;
