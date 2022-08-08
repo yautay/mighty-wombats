@@ -1,5 +1,5 @@
 <template>
-  <svg height="100%" viewBox="0 0 340 360"
+  <svg width=auto height="100%" viewBox="0 25 350 300"
        xml:space="preserve">
 
 		<g>
@@ -496,7 +496,6 @@
 			</g>
 		</g>
 </svg>
-
 </template>
 
 <script>
