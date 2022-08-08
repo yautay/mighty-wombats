@@ -1,7 +1,6 @@
 <template>
   <TheHeader></TheHeader>
-  <TheBody>
-  </TheBody>
+  <TheBody></TheBody>
   <TheFooter></TheFooter>
 </template>
 

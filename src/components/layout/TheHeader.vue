@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div id="wombat_logo">
+    <div class="logo">
       <WombatLogo></WombatLogo>
     </div>
     <nav>
@@ -86,6 +86,10 @@ header {
     }
   }
 
+  .logo {
+    height: 100%;
+  }
+
   nav {
     width: 90%;
     margin: auto;
@@ -108,7 +112,5 @@ header {
   }
 }
 
-#wombat_logo {
-  height: 100%;
-}
+
 </style>
