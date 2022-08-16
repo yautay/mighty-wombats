@@ -1,12 +1,20 @@
 <template>
-<footer>
-  <p>FOOTER HERE</p>
-</footer>
+  <footer>
+    <p>FOOTER HERE</p>
+    <h2>DB HOST :{{ db_host }}</h2>
+    <h2>DB HOST :{{ port }}</h2>
+  </footer>
 </template>
 
 <script>
 export default {
-  name: "TheFooter"
+  name: "TheFooter",
+  data() {
+    return {
+      db_host: process.env.DB_HOST,
+      port: process.env.DB_PORT
+    };
+  }
 };
 </script>
 
@@ -23,6 +31,7 @@ footer {
   justify-content: center;
   align-items: center;
 }
+
 p {
   color: white;
   margin: 0;
