@@ -1,17 +1,17 @@
 <template>
   <TheHeader></TheHeader>
-  <TheBody></TheBody>
+  <TheMain></TheMain>
   <TheFooter></TheFooter>
 </template>
 
 <script>
 import TheHeader from "@/components/layout/TheHeader";
 import TheFooter from "@/components/layout/TheFooter";
-import TheBody from "@/components/layout/TheBody";
+import TheMain from "@/components/layout/TheMain";
 
 export default {
   name: "App",
-  components: { TheFooter, TheHeader, TheBody }
+  components: { TheFooter, TheHeader, TheMain }
 };
 </script>
 
@@ -27,5 +27,6 @@ html {
 
 body {
   margin: 0;
+  font-size: 10px;
 }
 </style>

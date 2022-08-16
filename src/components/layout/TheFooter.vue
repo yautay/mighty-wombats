@@ -1,8 +1,6 @@
 <template>
   <footer>
     <p>FOOTER HERE</p>
-    <h2>DB HOST :{{ db_host }}</h2>
-    <h2>DB HOST :{{ port }}</h2>
   </footer>
 </template>
 
@@ -19,21 +17,23 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "src/scss/layout";
+@import "src/scss/layout.scss";
+@import "src/scss/colours.scss";
 
 footer {
   width: 100vw;
   height: $footer_height;
   position: fixed;
   bottom: 0;
-  background-color: #3d008d;
+  background-color: $overshadow;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 100;
 }
 
 p {
-  color: white;
+  color: $font_white;
   margin: 0;
 }
 </style>

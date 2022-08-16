@@ -5,29 +5,29 @@
     </div>
     <nav>
       <h1>
-        <router-link to="/">VFMA 117 "MIGHTY WOMBATS"</router-link>
+        <router-link to="/">VMFA 117 MIGHTY WOMBATS</router-link>
       </h1>
       <ul>
         <li>
           <router-link to="/news">News</router-link>
         </li>
         <li>
+          <router-link to="/about">O nas/Rooster</router-link>
+        </li>
+        <li>
           <router-link to="/greenie">Greenie Board</router-link>
         </li>
         <li>
-          <router-link to="/rooster">Rooster</router-link>
+          <router-link to="/log">Mission Log</router-link>
         </li>
         <li>
-          <router-link to="/gallery">Gallery</router-link>
+          <router-link to="/gallery">Galeria</router-link>
         </li>
         <li>
-          <router-link to="/about">About</router-link>
+          <router-link to="/contact">Kontakt/Rekrutacja</router-link>
         </li>
         <li>
-          <router-link to="/contact">Contact</router-link>
-        </li>
-        <li>
-          <router-link to="/squadron">Squadron</router-link>
+          <router-link to="/login">Zaloguj</router-link>
         </li>
       </ul>
     </nav>
@@ -45,21 +45,23 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "src/scss/layout";
+@import "src/scss/layout.scss";
+@import "src/scss/colours.scss";
 
 header {
   width: 100vw;
   height: $header_height;
   position: fixed;
   top: 0;
-  background-color: #3d008d;
+  background-color: $overshadow;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 100;
 
   a {
     text-decoration: none;
-    color: #f391e3;
+    color: $font_white;
     display: inline-block;
     padding: 0.75rem 1.5rem;
     border: 1px solid transparent;
@@ -67,7 +69,7 @@ header {
     &:active,
     &:hover,
     &.router-link-active {
-      border: 1px solid #f391e3;
+      border: 1px solid $font_white;
     }
   }
 
@@ -75,7 +77,7 @@ header {
     margin: 0;
 
     a {
-      color: white;
+      color: $font_white;
       margin: 0;
 
       &:hover,

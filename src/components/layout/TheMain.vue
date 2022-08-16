@@ -1,23 +1,22 @@
 <template>
-<body>
+<main>
 <router-view></router-view>
-</body>
+</main>
 </template>
 
 <script>
 export default {
-  name: "TheBody"
+  name: "TheMain"
 };
 </script>
 
 <style scoped lang="scss">
 @import "src/scss/layout";
 
-body {
-  width: auto;
-  padding-top: $header_height;
-  padding-bottom: $footer_height;
-  background-color: #d8c4f3;
+main {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
