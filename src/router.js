@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-import NewsList from "@/pages/page_news/NewsList";
+import PageNews from "@/pages/page_news/PageNews";
 import NewsDetail from "@/pages/page_news/NewsDetail";
 import GalleryList from "@/pages/page_gallery/GalleryList";
 import GalleryDetail from "@/pages/page_gallery/GalleryDetail";
@@ -19,9 +19,9 @@ const router = createRouter(
     history: createWebHistory(),
     routes: [
       { path: "/", redirect: "/news" },
-      { path: "/news", component: NewsList },
+      { path: "/news", component: PageNews },
       { path: "/news/:id", component: NewsDetail },
-      { path: "/about", component: AboutUs },
+      { path: "/rooster", component: AboutUs },
       { path: "/greenie", component: GreenieBoard },
       { path: "/log", component: LogList },
       { path: "/log/:id", component: LogDetail },

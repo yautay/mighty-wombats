@@ -5,14 +5,17 @@
     </div>
     <nav>
       <h1>
-        <router-link to="/">VMFA 117 MIGHTY WOMBATS</router-link>
+        <router-link class="squadron" to="/">
+            <div class="squadron_number">VMFA-117</div>
+            <div class="squadron_name tinos">MIGHTY<br>WOMBATS</div>
+        </router-link>
       </h1>
       <ul>
         <li>
           <router-link to="/news">News</router-link>
         </li>
         <li>
-          <router-link to="/about">O nas/Rooster</router-link>
+          <router-link to="/rooster">Rooster</router-link>
         </li>
         <li>
           <router-link to="/greenie">Greenie Board</router-link>
@@ -39,7 +42,7 @@ import WombatLogo from "@/components/elements/WombatLogo";
 
 export default {
   name: "TheHeader",
-  components: {WombatLogo}
+  components: { WombatLogo }
 
 };
 </script>
@@ -47,6 +50,7 @@ export default {
 <style scoped lang="scss">
 @import "src/scss/layout.scss";
 @import "src/scss/colours.scss";
+
 
 header {
   width: 100vw;
@@ -61,24 +65,45 @@ header {
 
   a {
     text-decoration: none;
-    color: $font_white;
+    color: $wombat_white;
     display: inline-block;
     padding: 0.75rem 1.5rem;
     border: 1px solid transparent;
-
+    font-size: 1rem;
+    font-weight: bold;
     &:active,
     &:hover,
     &.router-link-active {
-      border: 1px solid $font_white;
+      color: $wombat_yellow;
+      text-shadow: $wombat_yellow 2px 2px 25px;
+    }
+    &.squadron{
+      text-align: left;
+      line-height: 95%;
+      padding: 0;
+      .squadron_number{
+        font-size: .75rem;
+      }
+      .squadron_name{
+        font-size: 2.5rem;
+      }
+      &:active,
+      &:hover,
+      &.router-link-active {
+        color: $wombat_white;
+        text-shadow: none;
+      }
     }
   }
 
   h1 {
+
     margin: 0;
 
     a {
-      color: $font_white;
+      color: $wombat_white;
       margin: 0;
+      font-size: 2rem;
 
       &:hover,
       &:active,
@@ -89,6 +114,7 @@ header {
   }
 
   .logo {
+    margin-left: 20px;
     height: 100%;
   }
 

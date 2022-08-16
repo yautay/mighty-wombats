@@ -17,6 +17,7 @@ export default {
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tinos:wght@700&display=swap');
 * {
   box-sizing: border-box;
 }
@@ -28,5 +29,8 @@ html {
 body {
   margin: 0;
   font-size: 10px;
+}
+.tinos {
+  font-family: 'Tinos', sans-serif;
 }
 </style>

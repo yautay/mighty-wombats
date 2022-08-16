@@ -1,6 +1,8 @@
+const current_year = Date().getFullYear();
+
 <template>
   <footer>
-    <p>FOOTER HERE</p>
+    <p>Copyright © 2020-{{ year }} by Mighty Wombats. All Rights Reserved.</p>
   </footer>
 </template>
 
@@ -9,8 +11,7 @@ export default {
   name: "TheFooter",
   data() {
     return {
-      db_host: process.env.DB_HOST,
-      port: process.env.DB_PORT
+      year: new Date().getFullYear()
     };
   }
 };
@@ -25,6 +26,8 @@ footer {
   height: $footer_height;
   position: fixed;
   bottom: 0;
+  font-size: 0.75rem;
+  color: $wombat_white;
   background-color: $overshadow;
   display: flex;
   justify-content: center;
@@ -33,7 +36,7 @@ footer {
 }
 
 p {
-  color: $font_white;
+  color: $wombat_white;
   margin: 0;
 }
 </style>
