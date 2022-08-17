@@ -1,5 +1,3 @@
-const current_year = Date().getFullYear();
-
 <template>
   <footer>
     <p>Copyright © 2020-{{ year }} by Mighty Wombats. All Rights Reserved.</p>
