@@ -1,28 +1,27 @@
 <template>
   <section class="spa-fixed-background img-1">
-    <SpaHero></SpaHero>
+    <TheHero id="hero"></TheHero>
   </section>
   <section class="spa-fixed-background img-2">
-    <SpaVmfa117></SpaVmfa117>
+    <TheSquadron id="squadron"></TheSquadron>
   </section>
   <section class="spa-fixed-background img-3">
-    <SpaCvw22></SpaCvw22>
+    <TheAirwing id="airwing"></TheAirwing>
   </section>
   <section class="spa-fixed-background img-4">
-    <slot name="rooster"></slot>
-    <div class="spa-content">
-      <h2>ROSTER</h2>
-    </div>
+    <TheRooster id="rooster"></TheRooster>
   </section>
 </template>
 
 <script>
-import SpaHero from "@/pages/page_news/SpaHero";
-import SpaVmfa117 from "@/pages/page_news/SpaVmfa117";
-import SpaCvw22 from "@/pages/page_news/SpaCvw22";
+import TheHero from "@/pages/page-1-home/TheHero";
+import TheSquadron from "@/pages/page-1-home/TheSquadron";
+import TheAirwing from "@/pages/page-1-home/TheAirwing";
+import TheRooster from "@/pages/page-1-home/TheRooster";
+
 export default {
-  name: "PageNewsSPA",
-  components: {SpaHero, SpaVmfa117, SpaCvw22}
+  name: "PageHome",
+  components: { TheHero, TheSquadron, TheAirwing, TheRooster }
 };
 </script>
 
@@ -30,11 +29,12 @@ export default {
 @import "@/scss/layout.scss";
 @import "@/scss/colours.scss";
 
-h2{
+h2 {
   display: inline-block;
   color: $wombat_white;
   font-size: 3rem;
 }
+
 .spa-content::after {
   /* phone image on small devices */
   content: '';
@@ -43,8 +43,10 @@ h2{
   padding: 20% 0;
   margin: 2em auto 0;
 }
+
 .spa-fixed-background {
-  height: 100%;
+  height: auto;
+  min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -57,6 +59,10 @@ h2{
 
 .spa-fixed-background.img-2 {
   background-image: url("https://wombats.s3.eu-central-1.amazonaws.com/meetup22.jpg");
+}
+
+.spa-fixed-background.img-3 {
+  background-image: url("https://wombats.s3.eu-central-1.amazonaws.com/airwing.jpg");
 }
 
 .spa-fixed-background.img-4 {

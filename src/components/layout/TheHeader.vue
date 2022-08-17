@@ -1,22 +1,17 @@
 <template>
   <header>
-    <div class="logo">
-      <WombatLogo></WombatLogo>
-    </div>
+    <router-link class="logo" to="/">
+        <WombatLogo></WombatLogo>
+    </router-link>
+
     <nav>
       <h1>
         <router-link class="squadron" to="/">
-            <div class="squadron_number">VMFA-117</div>
-            <div class="squadron_name tinos">MIGHTY<br>WOMBATS</div>
+          <div class="squadron_number">VMFA-117</div>
+          <div class="squadron_name tinos">MIGHTY<br>WOMBATS</div>
         </router-link>
       </h1>
       <ul>
-        <li>
-          <router-link to="/news">News</router-link>
-        </li>
-        <li>
-          <router-link to="/rooster">Rooster</router-link>
-        </li>
         <li>
           <router-link to="/greenie">Greenie Board</router-link>
         </li>
@@ -69,24 +64,29 @@ header {
     display: inline-block;
     padding: 0.75rem 1.5rem;
     border: 1px solid transparent;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: bold;
+
     &:active,
     &:hover,
     &.router-link-active {
       color: $wombat_yellow;
       text-shadow: $wombat_yellow 2px 2px 25px;
     }
-    &.squadron{
+
+    &.squadron {
       text-align: left;
       line-height: 95%;
       padding: 0;
-      .squadron_number{
+
+      .squadron_number {
         font-size: .75rem;
       }
-      .squadron_name{
+
+      .squadron_name {
         font-size: 2.5rem;
       }
+
       &:active,
       &:hover,
       &.router-link-active {

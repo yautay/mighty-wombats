@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-import PageNews from "@/pages/page_news/PageNews";
-import NewsDetail from "@/pages/page_news/NewsDetail";
+import PageHome from "@/pages/page-1-home/PageHome";
 import GalleryList from "@/pages/page_gallery/GalleryList";
 import GalleryDetail from "@/pages/page_gallery/GalleryDetail";
 import LogList from "@/pages/page_logs/LogList";
@@ -19,8 +18,8 @@ const router = createRouter(
     history: createWebHistory(),
     routes: [
       { path: "/", redirect: "/news" },
-      { path: "/news", component: PageNews },
-      { path: "/news/:id", component: NewsDetail },
+      { path: "/news", component: PageHome },
+      { path: "/news/:id", component: PageHome },
       { path: "/rooster", component: AboutUs },
       { path: "/greenie", component: GreenieBoard },
       { path: "/log", component: LogList },
@@ -34,7 +33,15 @@ const router = createRouter(
           { path: "/commander", component: BossZone }]
       },
       { path: "/:notFound(.*)", component: NotFound }
-    ]
+    ],
+    scrollBehavior(to, from, savedPosition) {
+      if (to.hash) {
+        return {
+          el: to.hash,
+          behavior: 'smooth',
+        }
+      }
+    }
   }
 );
 
