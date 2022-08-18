@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: "TheSquardon"
+  name: "SectionSquardon"
 };
 </script>
 

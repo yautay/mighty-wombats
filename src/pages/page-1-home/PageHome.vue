@@ -1,27 +1,27 @@
 <template>
   <section class="spa-fixed-background img-1">
-    <TheHero id="hero"></TheHero>
+    <SectionHero class="body_container" id="hero"></SectionHero>
   </section>
   <section class="spa-fixed-background img-2">
-    <TheSquadron id="squadron"></TheSquadron>
+    <SectionSquadron class="body_container" id="squadron"></SectionSquadron>
   </section>
   <section class="spa-fixed-background img-3">
-    <TheAirwing id="airwing"></TheAirwing>
+    <SectionAirwing class="body_container" id="airwing"></SectionAirwing>
   </section>
   <section class="spa-fixed-background img-4">
-    <TheRooster id="rooster"></TheRooster>
+    <SectionRooster class="body_container" id="rooster"></SectionRooster>
   </section>
 </template>
 
 <script>
-import TheHero from "@/pages/page-1-home/TheHero";
-import TheSquadron from "@/pages/page-1-home/TheSquadron";
-import TheAirwing from "@/pages/page-1-home/TheAirwing";
-import TheRooster from "@/pages/page-1-home/TheRooster";
+import SectionHero from "@/pages/page-1-home/SectionHero";
+import SectionSquadron from "@/pages/page-1-home/SectionSquadron";
+import SectionAirwing from "@/pages/page-1-home/SectionAirwing";
+import SectionRooster from "@/pages/page-1-home/SectionRooster";
 
 export default {
   name: "PageHome",
-  components: { TheHero, TheSquadron, TheAirwing, TheRooster }
+  components: { SectionHero, SectionSquadron, SectionAirwing, SectionRooster }
 };
 </script>
 
@@ -29,23 +29,24 @@ export default {
 @import "@/scss/layout.scss";
 @import "@/scss/colours.scss";
 
-h2 {
-  display: inline-block;
-  color: $wombat_white;
-  font-size: 3rem;
+
+.body_container {
+  padding-top: $header_height;
+  height: inherit;
+  min-height: inherit;
 }
 
-.spa-content::after {
-  /* phone image on small devices */
-  content: '';
-  display: block;
-  width: 100%;
-  padding: 20% 0;
-  margin: 2em auto 0;
-}
+//.spa-content::after {
+//  /* phone image on small devices */
+//  content: '';
+//  display: block;
+//  width: 100%;
+//  padding: 20% 0;
+//  margin: 2em auto 0;
+//}
 
 .spa-fixed-background {
-  height: auto;
+  height: 100%;
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;

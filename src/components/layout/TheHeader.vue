@@ -3,7 +3,6 @@
     <router-link class="logo" to="/">
         <WombatLogo></WombatLogo>
     </router-link>
-
     <nav>
       <h1>
         <router-link class="squadron" to="/">
@@ -51,7 +50,6 @@ header {
   width: 100vw;
   height: $header_height;
   position: fixed;
-  top: 0;
   background-color: $overshadow;
   display: flex;
   justify-content: center;

@@ -1,23 +1,17 @@
 <template>
-  <div class="spa-content">
-    <h2>HERO</h2>
-  </div>
+  <TheSwiper class="spa-content"></TheSwiper>
 </template>
 
 <script>
+import TheSwiper from "@/pages/page-1-home/TheSwiper";
+
 export default {
-  name: "TheHero"
+  name: "SectionHero",
+  components: { TheSwiper }
 };
 </script>
-
 <style scoped lang="scss">
 @import "@/scss/layout.scss";
 @import "@/scss/colours.scss";
-
-h2{
-  display: inline-block;
-  color: $wombat_white;
-  font-size: 3rem;
-}
 
 </style>
