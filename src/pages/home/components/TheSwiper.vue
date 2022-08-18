@@ -20,36 +20,36 @@ import "swiper/css";
 
 export default {
   name: "TheSwiper",
-  // data() {
-  //   return {
-  //     mock_news: {
-  //       1: {
-  //         date: new Date(year = 2022, month = 3, day = 1),
-  //         title: "TEST Q1 2022 Report",
-  //         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
-  //         link: "https://test.pl"
-  //       },
-  //       2: {
-  //         date: new Date(year = 2021, month = 12, day = 25),
-  //         title: "TEST Q2 Ciach Ciach",
-  //         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
-  //         link: "https://test.pl"
-  //       },
-  //       3: {
-  //         date: new Date(year = 2021, month = 6, day = 29),
-  //         title: "TEST Q3 WowWowWow",
-  //         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
-  //         link: "https://test.pl"
-  //       },
-  //       4: {
-  //         date: new Date(year = 2021, month = 1, day = 2),
-  //         title: "TEST Q4 123'asd",
-  //         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
-  //         link: "https://test.pl"
-  //       }
-  //     }
-  //   }
-  // },
+  data() {
+    return {
+      mock_news: {
+        1: {
+          date: new Date('2022-03-11T03:24:00'),
+          title: "TEST Q1 2022 Report",
+          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+          link: "https://test.pl"
+        },
+        2: {
+          date: new Date('2021-12-23T03:24:00'),
+          title: "TEST Q2 Ciach Ciach",
+          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+          link: "https://test.pl"
+        },
+        3: {
+          date: new Date('2021-7-1T03:24:00'),
+          title: "TEST Q3 WowWowWow",
+          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+          link: "https://test.pl"
+        },
+        4: {
+          date: new Date('2021-2-1T03:24:00'),
+          title: "TEST Q4 123'asd",
+          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+          link: "https://test.pl"
+        }
+      }
+    }
+  },
   components: {
     Swiper,
     SwiperSlide
