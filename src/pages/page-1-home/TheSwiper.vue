@@ -9,7 +9,6 @@
     <SwiperSlide class="slide news-2">Slide 2</SwiperSlide>
     <SwiperSlide class="slide news-3">Slide 3</SwiperSlide>
     <SwiperSlide class="slide news-4">Slide 4</SwiperSlide>
-    ...
   </Swiper>
 </template>
 <script>

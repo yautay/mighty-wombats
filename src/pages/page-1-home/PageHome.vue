@@ -46,8 +46,7 @@ export default {
 //}
 
 .spa-fixed-background {
-  height: 100%;
-  min-height: 100vh;
+  height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
