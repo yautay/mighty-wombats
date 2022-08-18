@@ -11,8 +11,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "@/scss/layout.scss";
-@import "@/scss/colours.scss";
 
 h2{
   display: inline-block;

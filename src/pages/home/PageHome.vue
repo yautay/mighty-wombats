@@ -26,8 +26,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "@/scss/layout.scss";
-@import "@/scss/colours.scss";
 
 
 .body_container {
@@ -35,15 +33,6 @@ export default {
   height: inherit;
   min-height: inherit;
 }
-
-//.spa-content::after {
-//  /* phone image on small devices */
-//  content: '';
-//  display: block;
-//  width: 100%;
-//  padding: 20% 0;
-//  margin: 2em auto 0;
-//}
 
 .spa-fixed-background {
   height: 100vh;

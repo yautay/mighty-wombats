@@ -1,3 +1,9 @@
 $header_height: 150px;
 $footer_height: 50px;
 $body_height: -webkit-calc(100% - $header_height - $footer_height);
+$slider_height: -webkit-calc(100% - $footer_height);
+
+$phone: 480px;
+$tablet: 889px;
+$desktop: 1280px;
+$hd: 1920px;

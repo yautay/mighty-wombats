@@ -42,9 +42,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "src/scss/layout.scss";
-@import "src/scss/colours.scss";
-
 
 header {
   width: 100vw;

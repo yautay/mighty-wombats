@@ -11,7 +11,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "src/scss/layout";
 
 main {
   background-color: black;
