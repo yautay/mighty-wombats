@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import TheSwiper from "@/pages/page-1-home/TheSwiper";
+import TheSwiper from "@/pages/home/components/TheSwiper";
 
 export default {
   name: "SectionHero",

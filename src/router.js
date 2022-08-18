@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-import PageHome from "@/pages/page-1-home/PageHome";
+import PageHome from "@/pages/home/PageHome";
 import GalleryList from "@/pages/page_gallery/GalleryList";
 import GalleryDetail from "@/pages/page_gallery/GalleryDetail";
 import LogList from "@/pages/page_logs/LogList";

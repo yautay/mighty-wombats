@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: "TheNews",
+  name: "SimpleNews",
   data() {
     return {
       year: new Date().getFullYear()

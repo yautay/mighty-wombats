@@ -14,10 +14,10 @@
 </template>
 
 <script>
-import SectionHero from "@/pages/page-1-home/SectionHero";
-import SectionSquadron from "@/pages/page-1-home/SectionSquadron";
-import SectionAirwing from "@/pages/page-1-home/SectionAirwing";
-import SectionRooster from "@/pages/page-1-home/SectionRooster";
+import SectionHero from "@/pages/home/components/SectionHero";
+import SectionSquadron from "@/pages/home/components/SectionSquadron";
+import SectionAirwing from "@/pages/home/components/SectionAirwing";
+import SectionRooster from "@/pages/home/components/SectionRooster";
 
 export default {
   name: "PageHome",
