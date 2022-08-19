@@ -3,7 +3,6 @@
     <router-link class="logo" to="/">
         <WombatLogo></WombatLogo>
     </router-link>
-
     <nav>
       <h1>
         <router-link class="squadron" to="/">
@@ -43,15 +42,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "src/scss/layout.scss";
-@import "src/scss/colours.scss";
-
 
 header {
   width: 100vw;
   height: $header_height;
   position: fixed;
-  top: 0;
   background-color: $overshadow;
   display: flex;
   justify-content: center;

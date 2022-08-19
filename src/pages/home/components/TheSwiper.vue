@@ -1,0 +1,115 @@
+<template>
+  <Swiper
+    :slides-per-view="1"
+    :space-between="0"
+    :pagination="pagination"
+    :modules="modules"
+    @swiper="onSwiper"
+    @slideChange="onSlideChange"
+  >
+    <SwiperSlide v-for="(news, index) in mock_news"
+                 :key="news.id"
+                 :virtualIndex="index">
+      <SimpleNews
+        :date=news.date
+        :title=news.title
+        :description=news.description
+        :link=news.link
+      ></SimpleNews>
+    </SwiperSlide>
+  </Swiper>
+</template>
+<script>
+// Import Swiper Vue.js components
+import { Swiper, SwiperSlide } from "swiper/vue";
+import { Pagination } from "swiper";
+import SimpleNews from "@/pages/home/components/SimpleNews";
+// Import Swiper styles
+import "swiper/scss";
+import "swiper/scss/pagination";
+
+export default {
+  name: "TheSwiper",
+  data() {
+    return {
+      mock_news: [
+        {
+          date: "2022-03-11",
+          title: "TEST Q1 2022 Report",
+          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+          link: "https://www.dotcom-tools.com/website-speed-test"
+        },
+        {
+          date: "2021-12-23",
+          title: "TEST Q2 Ciach Ciach",
+          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+          link: "https://www.dotcom-tools.com/website-speed-test"
+        },
+        {
+          date: "2021-07-01",
+          title: "TEST Q3 WowWowWow",
+          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+          link: "https://www.dotcom-tools.com/website-speed-test"
+        },
+        {
+          date: "2021-02-01",
+          title: "TEST Q4 123'asd",
+          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+          link: "https://www.dotcom-tools.com/website-speed-test"
+        }]
+
+    };
+  },
+  components: {
+    Swiper,
+    SwiperSlide,
+    SimpleNews
+  },
+  setup() {
+    const onSwiper = (swiper) => {
+      console.log(swiper);
+    };
+    const onSlideChange = () => {};
+    return {
+      onSwiper,
+      onSlideChange,
+      pagination: {
+        clickable: true,
+      },
+      modules: [Pagination],
+    };
+  }
+};
+
+</script>
+<style  lang="scss">
+
+.swiper-slide {
+  display: flex;
+  flex-wrap: nowrap;
+  background: none;
+}
+.swiper-pagination{
+  margin-bottom: 50px;
+
+}
+.swiper-pagination-bullet
+ {
+  width: 10px;
+  height: 10px;
+  text-align: center;
+  opacity: .6;
+  background: black;
+}
+
+.swiper-pagination-bullet-active {
+  border-radius: 40%;
+  width: 15px;
+  height: 10px;
+  color: #fff;
+  background: #ffffff;
+}
+
+
+
+</style>

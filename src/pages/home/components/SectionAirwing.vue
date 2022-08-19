@@ -6,13 +6,11 @@
 
 <script>
 export default {
-  name: "TheAirwing"
+  name: "SectionAirwing"
 };
 </script>
 
 <style scoped lang="scss">
-@import "@/scss/layout.scss";
-@import "@/scss/colours.scss";
 
 h2{
   display: inline-block;

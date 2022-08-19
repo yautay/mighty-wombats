@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-import PageHome from "@/pages/page-1-home/PageHome";
-import GalleryList from "@/pages/page_gallery/GalleryList";
-import GalleryDetail from "@/pages/page_gallery/GalleryDetail";
+import PageHome from "@/pages/home/PageHome";
+import GalleryList from "@/pages/gallery/GalleryList";
+import GalleryDetail from "@/pages/gallery/GalleryDetail";
 import LogList from "@/pages/page_logs/LogList";
 import LogDetail from "@/pages/page_logs/LogDetail";
 import GreenieBoard from "@/pages/page_greenie/GreenieBoard";

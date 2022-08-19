@@ -16,8 +16,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "src/scss/layout.scss";
-@import "src/scss/colours.scss";
 
 footer {
   width: 100vw;
