@@ -7,7 +7,10 @@
       <div class="content_element news_description">
         <p>{{ description }}</p></div>
       <div class="content_element news_link tinos">
-        <a v-bind:href="link">Czytaj więcej...</a>
+        <a v-bind:href="link">Czytaj więcej&nbsp;&nbsp;<font-awesome-icon class="caret-fa"
+                                                                          icon="fa-solid fa-caret-right" />
+        </a>
+
       </div>
     </div>
   </div>
@@ -15,6 +18,8 @@
 
 <script>
 import { monthToPolish } from "@/js/month-to-polish";
+import { Swiper, SwiperSlide } from "swiper/vue";
+
 export default {
   name: "SimpleNews",
   props: ["date", "title", "description", "link"],
@@ -33,11 +38,6 @@ export default {
 
 <style scoped lang="scss">
 
-
-.half {
-  width: 50%;
-}
-
 .simple_news {
   width: 80%;
   height: $slider_height;
@@ -45,12 +45,13 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  @media screen and (max-width: $phone){
-    width: 95%;
+  @media screen and (max-width: $phone) {
+    width: 100%;
   }
 
   .content_block {
     width: 50%;
+    padding-left: 5%;
     padding-bottom: 20px;
     display: inline-flex;
     flex-direction: column;
@@ -58,7 +59,7 @@ export default {
     justify-content: flex-end;
     align-content: flex-end;
     align-items: flex-end;
-    @media screen and (max-width: $tablet){
+    @media screen and (max-width: $tablet) {
       width: 100%;
     }
 
@@ -82,6 +83,7 @@ export default {
     .news_title {
       height: 2rem;
       font-size: 2rem;
+
       h3 {
         margin: 0;
         padding: 0;
@@ -99,11 +101,18 @@ export default {
     }
 
     .news_link {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
+
       a {
         text-decoration: none;
         outline: none;
         color: $wombat_white;
+
+        .caret-fa {
+          color: $wombat_yellow;
+          font-size: 1.5rem;
+
+        }
       }
 
     }

@@ -2,11 +2,14 @@
   <Swiper
     :slides-per-view="1"
     :space-between="0"
+    :pagination="pagination"
+    :modules="modules"
     @swiper="onSwiper"
     @slideChange="onSlideChange"
   >
     <SwiperSlide v-for="(news, index) in mock_news"
-                 :key="news.id">
+                 :key="news.id"
+                 :virtualIndex="index">
       <SimpleNews
         :date=news.date
         :title=news.title
@@ -19,9 +22,11 @@
 <script>
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from "swiper/vue";
+import { Pagination } from "swiper";
 import SimpleNews from "@/pages/home/components/SimpleNews";
 // Import Swiper styles
-import "swiper/css";
+import "swiper/scss";
+import "swiper/scss/pagination";
 
 export default {
   name: "TheSwiper",
@@ -64,23 +69,47 @@ export default {
     const onSwiper = (swiper) => {
       console.log(swiper);
     };
-    const onSlideChange = () => {
-      console.log("slide change");
-    };
+    const onSlideChange = () => {};
     return {
       onSwiper,
-      onSlideChange
+      onSlideChange,
+      pagination: {
+        clickable: true,
+      },
+      modules: [Pagination],
     };
   }
 };
 
 </script>
-<style scoped lang="scss">
+<style  lang="scss">
 
 .swiper-slide {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: center;
+  background: none;
 }
+.swiper-pagination{
+  margin-bottom: 50px;
+
+}
+.swiper-pagination-bullet
+ {
+  width: 10px;
+  height: 10px;
+  text-align: center;
+  opacity: .6;
+  background: black;
+}
+
+.swiper-pagination-bullet-active {
+  border-radius: 40%;
+  width: 15px;
+  height: 10px;
+  color: #fff;
+  background: #ffffff;
+}
+
+
 
 </style>
