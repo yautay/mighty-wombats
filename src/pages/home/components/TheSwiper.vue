@@ -99,7 +99,7 @@ export default {
   height: 10px;
   text-align: center;
   opacity: .6;
-  background: black;
+  background: #464646;
 }
 
 .swiper-pagination-bullet-active {

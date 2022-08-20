@@ -40,6 +40,13 @@ export default {
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
+  &::before {
+    position: absolute;
+    content:"";
+    height:100%;
+    width:100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%,rgba(0,0,0,0.4) 40%, rgba(0, 0, 0, .4) 90%, rgba(0, 0, 0, 1) 100%);
+  }
 }
 
 .spa-fixed-background.img-1 {
