@@ -10,9 +10,16 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 
 main {
   background-color: black;
+}
+.underline {
+  text-decoration: underline;
+  text-underline-offset: 2rem;
+  text-decoration-thickness: 5px;
+  text-decoration-color: $wombat_yellow;
+
 }
 </style>
