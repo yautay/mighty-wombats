@@ -45,7 +45,7 @@ export default {
     content:"";
     height:100%;
     width:100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%,rgba(0,0,0,0.4) 40%, rgba(0, 0, 0, .4) 90%, rgba(0, 0, 0, 1) 100%);
+    background: $bckg_gradient_filter;
   }
 }
 

@@ -11,7 +11,7 @@ import ContactUs from "@/pages/page_contact/ContactUs";
 import SquadronPage from "@/pages/page_login/LoginPage";
 import BossZone from "@/pages/page_login/BossZone";
 import RegisterFlight from "@/pages/page_login/RegisterFlight";
-import NotFound from "@/pages/NotFound";
+import NotFound from "@/pages/error/NotFound";
 
 const router = createRouter(
   {
