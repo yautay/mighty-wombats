@@ -5,7 +5,7 @@
       <div class="content_element news_title tinos">
         <h3>{{ title }}</h3></div>
       <div class="content_element news_description">
-        <p>{{ description }}</p></div>
+        <p>{{ description_cut }}</p></div>
       <div class="content_element news_link tinos">
         <a v-bind:href="link">Czytaj więcej&nbsp;&nbsp;<font-awesome-icon class="caret-fa"
                                                                           icon="fa-solid fa-caret-right"/>
@@ -23,6 +23,11 @@ import {Swiper, SwiperSlide} from "swiper/vue";
 export default {
   name: "SimpleNews",
   props: ["date", "title", "description", "link"],
+  data() {
+    return {
+      description_cut: this.description.split(/\s+/).slice(0, 30).join(' ') + ' [...]'
+    }
+  },
   methods: {
     getDateFormated: function (date) {
       const dateParts = date.split("-");
@@ -40,11 +45,15 @@ export default {
 
 .simple_news {
   width: 80%;
-  height: $slider_height;
-  margin-bottom: $footer_height;
+  height: $slider_height_desktop;
+  margin-bottom: $footer_height_desktop;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  @media screen and (max-width: $desktop) {
+    height: $slider_height_mobile;
+    margin-bottom: $footer_height_mobile;
+  }
   @media screen and (max-width: $phone) {
     width: 100%;
   }

@@ -1,9 +1,17 @@
-$header_height: 150px;
-$footer_height: 50px;
-$body_height: -webkit-calc(100% - $header_height - $footer_height);
-$slider_height: -webkit-calc(100% - $footer_height);
+$header_height_desktop: 150px;
+$footer_height_desktop: 50px;
+
+$header_height_mobile: 50px;
+$footer_height_mobile: 30px;
+
+$body_height_desktop: -webkit-calc(100% - $header_height_desktop - $footer_height_desktop);
+$body_height_mobile: -webkit-calc(100% - $header_height_mobile - $footer_height_mobile);
+
+$slider_height_desktop: -webkit-calc(100% - $footer_height_desktop);
+$slider_height_mobile: -webkit-calc(100% - $footer_height_mobile);
 
 $phone: 480px;
 $tablet: 889px;
 $desktop: 1280px;
 $hd: 1920px;
+

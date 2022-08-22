@@ -33,6 +33,7 @@
         </li>
       </ul>
     </nav>
+    <nav v-else> hhhhh </nav>
   </header>
 </template>
 
@@ -44,12 +45,13 @@ export default {
   components: {WombatLogo},
   data() {
     return {
-      hamburger_active: window.innerWidth < 800
+      hamburger_active: window.innerWidth <= 889,
+      header_height: "150px"
     }
   },
   mounted() {
     window.onresize = () => {
-      this.hamburger_active = window.innerWidth < 800;
+      this.hamburger_active = window.innerWidth <= 889;
     }
   },
 };
@@ -58,11 +60,15 @@ export default {
 <style scoped lang="scss">
 
 header {
-  height: $header_height;
+  height: $header_height_desktop;
   width: 100%;
   position: fixed;
   background-color: $overshadow;
   z-index: 100;
+
+  @media screen and (max-width: $desktop){
+    height: $header_height_mobile;
+  }
 
   nav {
     width: inherit;
@@ -82,6 +88,10 @@ header {
           font-size: 1.5rem;
           font-weight: bold;
           text-decoration: none;
+          @media screen and (max-width: $desktop) {
+            font-size: 1rem;
+
+          }
 
           &:active,
           &:hover,
@@ -99,7 +109,11 @@ header {
 
             .home_img {
               img {
-                height: $header_height;
+                height: $header_height_desktop;
+                @media screen and (max-width: $desktop) {
+                  height: $header_height_mobile;
+
+                }
               }
 
             }
@@ -112,10 +126,18 @@ header {
 
               .squadron_number {
                 font-size: 1rem;
+                @media screen and (max-width: $desktop) {
+                  font-size: .5rem;
+
+                }
               }
 
               .squadron_name {
                 font-size: 2.5rem;
+                @media screen and (max-width: $desktop) {
+                  font-size: 1rem;
+
+                }
               }
             }
 
