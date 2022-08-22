@@ -1,4 +1,5 @@
 <template>
+  <h2 class="hidden">News</h2>
   <TheSwiper class="spa-content"></TheSwiper>
 </template>
 

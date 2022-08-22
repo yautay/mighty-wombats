@@ -83,7 +83,9 @@ export default {
 
 </script>
 <style  lang="scss">
-
+.swiper {
+  height: 100%;
+}
 .swiper-slide {
   display: flex;
   flex-wrap: nowrap;

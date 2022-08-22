@@ -4,32 +4,32 @@
     <nav v-if="!hamburger_active">
       <ul>
         <li>
-          <router-link class="squadron" to="/">
+          <router-link to="/">
             <div class="home">
               <div class="home_img">
                 <img src="https://wombats.s3.eu-central-1.amazonaws.com/wombat_logo.svg" alt="VMFA117 logo">
               </div>
               <div class="home_txt">
-                <h2 class="squadron_number">VMFA-117</h2>
+                <p class="squadron_number">VMFA-117</p>
                 <div class="squadron_name tinos">MIGHTY<br>WOMBATS</div>
               </div>
             </div>
           </router-link>
         </li>
         <li>
-          <router-link to="/greenie"><h2 >Greenie Board</h2></router-link>
+          <router-link to="/greenie"><p>Greenie Board</p></router-link>
         </li>
         <li>
-          <router-link to="/log"><h2 >Mission Log</h2></router-link>
+          <router-link to="/log"><p>Mission Log</p></router-link>
         </li>
         <li>
-          <router-link to="/gallery"><h2 >Galeria</h2></router-link>
+          <router-link to="/gallery"><p>Galeria</p></router-link>
         </li>
         <li>
-          <router-link to="/contact"><h2 >Rekrutacja</h2></router-link>
+          <router-link to="/contact"><p>Rekrutacja</p></router-link>
         </li>
         <li>
-          <router-link to="/login"><h2 >Zaloguj</h2></router-link>
+          <router-link to="/login"><p>Zaloguj</p></router-link>
         </li>
       </ul>
     </nav>
@@ -72,7 +72,7 @@ header {
       width: inherit;
       height: inherit;
       display: flex;
-      justify-content: space-evenly;
+      justify-content: space-around;
       align-items: center;
 
       li {
@@ -81,25 +81,43 @@ header {
           color: $wombat_white;
           font-size: 1.5rem;
           font-weight: bold;
+          text-decoration: none;
+
+          &:active,
+          &:hover,
+          &.router-link-active {
+            color: $wombat_yellow;
+            text-shadow: transparentize($wombat_yellow, .5) 5px 3px 50px;
+          }
+
           .home {
-            .squadron_number{
-              font-size: 1rem;
-            }
+            width: 50vw;
             display: flex;
             flex-direction: row;
             align-content: center;
-            justify-content: center;
-            .home_img {img {
-              height: $header_height;
-            }
+            justify-content: flex-start;
+
+            .home_img {
+              img {
+                height: $header_height;
+              }
 
             }
+
             .home_txt {
+              margin-left: 1rem;
               display: flex;
               flex-direction: column;
               justify-content: center;
-            }
 
+              .squadron_number {
+                font-size: 1rem;
+              }
+
+              .squadron_name {
+                font-size: 2.5rem;
+              }
+            }
 
           }
         }
@@ -107,60 +125,4 @@ header {
     }
   }
 }
-
-//a {
-//  text-decoration: none;
-//  color: $wombat_white;
-//  display: inline-block;
-//  padding: 0.75rem 1.5rem;
-//  border: 1px solid transparent;
-//  font-size: 1.5rem;
-//  font-weight: bold;
-//
-//  &:active,
-//  &:hover,
-//  &.router-link-active {
-//    color: $wombat_yellow;
-//    text-shadow: $wombat_yellow 2px 2px 25px;
-//  }
-//
-//  &.squadron {
-//    text-align: left;
-//    line-height: 95%;
-//    padding: 0;
-//
-//    .squadron_number {
-//      font-size: .75rem;
-//    }
-//
-//    .squadron_name {
-//      font-size: 2.5rem;
-//    }
-//
-//    &:active,
-//    &:hover,
-//    &.router-link-active {
-//      color: $wombat_white;
-//      text-shadow: none;
-//    }
-//  }
-//}
-//
-//h1 {
-//
-//  margin: 0;
-//
-//  a {
-//    color: $wombat_white;
-//    margin: 0;
-//    font-size: 2rem;
-//
-//    &:hover,
-//    &:active,
-//    &.router-link-active {
-//      border-color: transparent;
-//    }
-//  }
-//}
-
 </style>
