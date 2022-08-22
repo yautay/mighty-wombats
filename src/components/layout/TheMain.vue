@@ -1,7 +1,7 @@
 <template>
-<main>
-<router-view></router-view>
-</main>
+  <main>
+    <router-view></router-view>
+  </main>
 </template>
 
 <script>
@@ -15,6 +15,7 @@ export default {
 main {
   background-color: black;
 }
+
 .underline {
   text-decoration: underline;
   text-underline-offset: 2rem;

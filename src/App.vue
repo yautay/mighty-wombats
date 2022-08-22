@@ -33,4 +33,10 @@ body {
 .tinos {
   font-family: 'Tinos', sans-serif;
 }
+.hidden {
+  display: block;
+  position: absolute;
+  color: transparent;
+
+}
 </style>
