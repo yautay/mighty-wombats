@@ -10,6 +10,10 @@ $body_height_mobile: -webkit-calc(100% - $header_height_mobile - $footer_height_
 $slider_height_desktop: -webkit-calc(100% - $footer_height_desktop);
 $slider_height_mobile: -webkit-calc(100% - $footer_height_mobile);
 
+$hamburger_menu_width: 300px;
+$hamburger_menu_height: 400px;
+
+
 $phone: 480px;
 $tablet: 889px;
 $desktop: 1280px;
