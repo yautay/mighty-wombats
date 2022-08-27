@@ -3,14 +3,13 @@ import { createRouter, createWebHistory } from "vue-router";
 import PageHome from "@/pages/home/PageHome";
 import GalleryList from "@/pages/gallery/GalleryList";
 import GalleryDetail from "@/pages/gallery/GalleryDetail";
-import LogList from "@/pages/page_logs/LogList";
-import LogDetail from "@/pages/page_logs/LogDetail";
-import GreenieBoard from "@/pages/page_greenie/GreenieBoard";
-import AboutUs from "@/pages/page_about/AboutUs";
-import ContactUs from "@/pages/page_contact/ContactUs";
-import SquadronPage from "@/pages/page_login/LoginPage";
-import BossZone from "@/pages/page_login/BossZone";
-import RegisterFlight from "@/pages/page_login/RegisterFlight";
+import LogList from "@/pages/mission_log/LogList";
+import LogDetail from "@/pages/mission_log/LogDetail";
+import GreenieBoard from "@/pages/greenie/GreenieBoard";
+import ContactUs from "@/pages/contact/ContactUs";
+import SquadronPage from "@/pages/login/LoginPage";
+import BossZone from "@/pages/login/BossZone";
+import RegisterFlight from "@/pages/login/RegisterFlight";
 import NotFound from "@/pages/error/NotFound";
 
 const router = createRouter(
@@ -20,7 +19,6 @@ const router = createRouter(
       { path: "/", redirect: "/news" },
       { path: "/news", component: PageHome },
       { path: "/news/:id", component: PageHome },
-      { path: "/rooster", component: AboutUs },
       { path: "/greenie", component: GreenieBoard },
       { path: "/log", component: LogList },
       { path: "/log/:id", component: LogDetail },

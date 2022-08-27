@@ -5,8 +5,9 @@
 <script>
 import UnderConstruction from "@/components/elements/UnderConstruction";
 export default {
-  name: "GalleryList",
+  name: "ContactUs",
   components: {UnderConstruction}
+
 };
 </script>
 
