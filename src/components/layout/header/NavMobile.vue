@@ -182,12 +182,12 @@ $ribbon_height: 10px;
 
           }
 
-          &:active,
-          &:hover,
-          &.router-link-active {
-            color: $wombat_yellow;
-            text-shadow: transparentize($wombat_yellow, .5) 5px 3px 50px;
-          }
+          //&:active,
+          //&:hover,
+          //&.router-link-active {
+          //  color: $wombat_yellow;
+          //  text-shadow: transparentize($wombat_yellow, .5) 5px 3px 50px;
+          //}
 
           .home {
             width: 50vw;
