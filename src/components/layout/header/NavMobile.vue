@@ -19,7 +19,7 @@
   <div class="slider-wrapper">
     <div class="sliding_menu" :class="{active: isActive, inactive: !isActive}">
       <ul>
-      <TheRouting></TheRouting>
+      <TheRouting @deactivate_mobile_menu="deactivate_menu"></TheRouting>
       </ul>
     </div>
   </div>
@@ -39,8 +39,10 @@ export default {
   methods: {
     switch_menu_state() {
       this.isActive = !this.isActive;
+    },
+    deactivate_menu() {
+      this.isActive = false
     }
-
   },
   components: {TheRouting}
 }
@@ -181,13 +183,6 @@ $ribbon_height: 10px;
             font-size: 1rem;
 
           }
-
-          //&:active,
-          //&:hover,
-          //&.router-link-active {
-          //  color: $wombat_yellow;
-          //  text-shadow: transparentize($wombat_yellow, .5) 5px 3px 50px;
-          //}
 
           .home {
             width: 50vw;
