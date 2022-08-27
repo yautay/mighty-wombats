@@ -1,16 +1,10 @@
 <template>
-  <section class="spa-fixed-background img-1">
-    <SectionHero class="body_container" id="hero"></SectionHero>
-  </section>
-  <section class="spa-fixed-background img-2">
-    <SectionSquadron class="body_container" id="squadron"></SectionSquadron>
-  </section>
-  <section class="spa-fixed-background img-3">
-    <SectionAirwing class="body_container" id="airwing"></SectionAirwing>
-  </section>
-  <section class="spa-fixed-background img-4">
-    <SectionRooster class="body_container" id="rooster"></SectionRooster>
-  </section>
+  <div class="parallax_main">
+    <SectionHero class="section_container parallax bg-hero" id="hero"></SectionHero>
+    <SectionSquadron class="section_container parallax bg-squadron" id="squadron"></SectionSquadron>
+    <SectionAirwing class="section_container parallax bg-airwing" id="airwing"></SectionAirwing>
+    <SectionRooster class="section_container parallax bg-rooster" id="rooster"></SectionRooster>
+  </div>
 </template>
 
 <script>
@@ -26,45 +20,52 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.parallax_main {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
+  .parallax {
+    transform-style: preserve-3d;
+    height: 110vh;
+
+    &::after{
+      content: ' ';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      transform: translateZ(-.2px) scale(1.1);
+      z-index: -1;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+  .bg-hero::after{
+    background-image: $bckg_gradient_filter, url("https://wombats.s3.eu-central-1.amazonaws.com/bckg.jpg");
+
+  }
+  .bg-airwing::after{
+    background-image: $bckg_gradient_filter, url("https://wombats.s3.eu-central-1.amazonaws.com/airwing.jpg");
+
+  }
+  .bg-squadron::after{
+    background-image: $bckg_gradient_filter, url("https://wombats.s3.eu-central-1.amazonaws.com/meetup22.jpg");
+
+  }
+  .bg-rooster::after{
+    background-image: $bckg_gradient_filter, url("https://wombats.s3.eu-central-1.amazonaws.com/join.jpg");
+
+  }
+}
 
 
-.body_container {
+.section_container {
   padding-top: $header_height_desktop;
   @media screen and (max-width: $desktop) {
     padding-top: $header_height_mobile;
   }
-  height: inherit;
-  min-height: inherit;
 }
 
-.spa-fixed-background {
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-  &::before {
-    position: absolute;
-    content:"";
-    height:100%;
-    width:100%;
-    background: $bckg_gradient_filter;
-  }
-}
-
-.spa-fixed-background.img-1 {
-  background-image: url("https://wombats.s3.eu-central-1.amazonaws.com/bckg.jpg");
-}
-
-.spa-fixed-background.img-2 {
-  background-image: url("https://wombats.s3.eu-central-1.amazonaws.com/meetup22.jpg");
-}
-
-.spa-fixed-background.img-3 {
-  background-image: url("https://wombats.s3.eu-central-1.amazonaws.com/airwing.jpg");
-}
-
-.spa-fixed-background.img-4 {
-  background-image: url("https://wombats.s3.eu-central-1.amazonaws.com/join.jpg");
-}
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="spa-content">
+  <div>
     <h2>VMFA117</h2>
     <UnderConstruction></UnderConstruction>
   </div>
@@ -7,6 +7,7 @@
 
 <script>
 import UnderConstruction from "@/pages/home/components/UnderConstruction";
+
 export default {
   name: "SectionSquardon",
   components: {UnderConstruction}
@@ -16,7 +17,7 @@ export default {
 
 <style scoped lang="scss">
 
-h2{
+h2 {
   display: inline-block;
   color: $wombat_white;
   font-size: 3rem;

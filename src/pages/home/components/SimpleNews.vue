@@ -46,13 +46,13 @@ export default {
 .simple_news {
   width: 80%;
   height: $slider_height_desktop;
-  margin-bottom: $footer_height_desktop;
+  margin-bottom: $footer_height_desktop + 170px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   @media screen and (max-width: $desktop) {
     height: $slider_height_mobile;
-    margin-bottom: $footer_height_mobile;
+    margin-bottom: $footer_height_mobile + 170px;
   }
   @media screen and (max-width: $phone) {
     width: 100%;

@@ -92,9 +92,9 @@ export default {
   background: none;
 }
 .swiper-pagination{
-  margin-bottom: $footer_height_desktop;
+  margin-bottom: $footer_height_desktop + 170px;
   @media screen and (max-width: $desktop) {
-    margin-bottom: $footer_height_mobile;
+    margin-bottom: $footer_height_mobile + 170px;
   }
 }
 .swiper-pagination-bullet
