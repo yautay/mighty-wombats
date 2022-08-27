@@ -1,11 +1,11 @@
 <template>
-<div class="bg"></div>
+  <div class="bg"></div>
   <div class="content">
     <div class="announcement tinos">
-    <p class="underline">Something went wrong...</p>
-    <p>Marshal has just announced.</p>
-    <h2 class="tinos">CASE 404</h2>
-  </div>
+      <p class="underline">Something went wrong...</p>
+      <p>Marshal has just announced.</p>
+      <h2 class="tinos">CASE 404</h2>
+    </div>
   </div>
 </template>
 
@@ -24,36 +24,62 @@ export default {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-    &::before {
-      position: absolute;
-      content:"";
-      height:100%;
-      width:100%;
-      background: $bckg_gradient_filter;
-    }
+  z-index: 0;
+
+  &::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: $bckg_gradient_filter;
+    z-index: 1;
+  }
 }
+
 .content {
-  position: absolute;
   height: 100vh;
-  width: 50%;
-  padding-top: $header_height;
-  display: inline-block;
+  padding-top: $header_height_desktop;
+  display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  @media screen and (max-width: $desktop) {
+    padding-top: $header_height_mobile;
+  }
 
   .announcement {
-    padding-top: 50vh;
-    padding-left: 15vw;
+    margin: 10% 10%;
     color: $wombat_white;
+    z-index: 99;
+
     p {
       font-size: 1.75rem;
       margin: 0;
+
       &.underline {
         padding-bottom: 3rem;
 
       }
     }
+
     h2 {
       font-size: 4rem;
+    }
+    @media screen and (max-width: $phone) {
+      p {
+        font-size: 1.5rem;
+
+        &.underline {
+          padding-bottom: 3rem;
+          text-underline-offset: 1.5rem;
+
+        }
+      }
+
+      h2 {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+      }
     }
   }
 

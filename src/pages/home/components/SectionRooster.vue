@@ -1,12 +1,16 @@
 <template>
   <div class="spa-content">
     <h2>Rooster</h2>
+    <UnderConstruction></UnderConstruction>
   </div>
 </template>
 
 <script>
+import UnderConstruction from "@/pages/home/components/UnderConstruction";
 export default {
-  name: "SectionRooster"
+  name: "SectionRooster",
+  components: {UnderConstruction}
+
 };
 </script>
 

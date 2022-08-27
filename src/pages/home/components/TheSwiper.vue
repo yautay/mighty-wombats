@@ -83,15 +83,19 @@ export default {
 
 </script>
 <style  lang="scss">
-
+.swiper {
+  height: 100%;
+}
 .swiper-slide {
   display: flex;
   flex-wrap: nowrap;
   background: none;
 }
 .swiper-pagination{
-  margin-bottom: 50px;
-
+  margin-bottom: $footer_height_desktop;
+  @media screen and (max-width: $desktop) {
+    margin-bottom: $footer_height_mobile;
+  }
 }
 .swiper-pagination-bullet
  {

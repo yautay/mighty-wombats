@@ -1,12 +1,16 @@
 <template>
   <div class="spa-content">
     <h2>VMFA117</h2>
+    <UnderConstruction></UnderConstruction>
   </div>
 </template>
 
 <script>
+import UnderConstruction from "@/pages/home/components/UnderConstruction";
 export default {
-  name: "SectionSquardon"
+  name: "SectionSquardon",
+  components: {UnderConstruction}
+
 };
 </script>
 

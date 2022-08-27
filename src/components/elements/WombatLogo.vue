@@ -1,5 +1,6 @@
 <template>
-  <svg width=auto height="100%" viewBox="0 25 350 300"
+  <div class="svg-container">
+  <svg viewBox="0 25 350 300"
        xml:space="preserve">
 
 		<g>
@@ -496,6 +497,7 @@
 			</g>
 		</g>
 </svg>
+  </div>
 </template>
 
 <script>
@@ -503,7 +505,14 @@ export default {
   name: "WombatLogo"
 }
 </script>
+<style scoped lang="scss">
+.svg-container {
+  position: relative;
 
-<style scoped>
-
+}
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 </style>

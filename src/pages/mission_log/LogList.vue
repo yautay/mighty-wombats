@@ -1,12 +1,13 @@
 <template>
-<UnderConstruction></UnderConstruction>
+  <UnderConstruction></UnderConstruction>
 </template>
 
 <script>
 import UnderConstruction from "@/components/elements/UnderConstruction";
 export default {
-  name: "GalleryList",
+  name: "LogList",
   components: {UnderConstruction}
+
 };
 </script>
 

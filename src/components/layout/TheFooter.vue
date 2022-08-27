@@ -19,7 +19,10 @@ export default {
 
 footer {
   width: 100vw;
-  height: $footer_height;
+  height: $footer_height_desktop;
+  @media screen and (max-width: $desktop) {
+    height: $footer_height_mobile;
+  }
   position: fixed;
   bottom: 0;
   font-size: 0.75rem;

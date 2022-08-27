@@ -29,7 +29,10 @@ export default {
 
 
 .body_container {
-  padding-top: $header_height;
+  padding-top: $header_height_desktop;
+  @media screen and (max-width: $desktop) {
+    padding-top: $header_height_mobile;
+  }
   height: inherit;
   min-height: inherit;
 }

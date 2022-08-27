@@ -1,12 +1,16 @@
 <template>
   <div class="spa-content">
     <h2>CVW-22</h2>
+    <UnderConstruction></UnderConstruction>
   </div>
 </template>
 
 <script>
+import UnderConstruction from "@/pages/home/components/UnderConstruction";
 export default {
-  name: "SectionAirwing"
+  name: "SectionAirwing",
+  components: {UnderConstruction}
+
 };
 </script>
 
