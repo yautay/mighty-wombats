@@ -2,12 +2,12 @@ version: "3.7"
 
 services:
   mysqldb:
-    container_name: mysqldb-wombats
+    container_name: mysqldb-wombats-legacy
     image: mysql:8
     restart: always
     command: --default-authentication-plugin=mysql_native_password
     volumes:
-      - wombat_db-data:/var/lib/mysql
+      - wombat_db-data-legacy:/var/lib/mysql
       - ./scripts:/docker-entrypoint-initdb.d
     environment:
       - MYSQL_ROOT_PASSWORD=hornet
@@ -15,20 +15,21 @@ services:
       - MYSQL_USER=user
       - MYSQL_PASSWORD=user123
     ports:
-      - '3306:3306'
+      - '3316:3306'
     networks:
-      - wombat-net
+      - wombat-net-legacy
 
   adminer:
     image: adminer
+    container_name: adminer-legacy
     restart: always
     ports:
-      - '8080:8080'
+      - '8088:8088'
     networks:
-      - wombat-net
+      - wombat-net-legacy
 
 volumes:
-  wombat_db-data:
+  wombat_db-data-legacy:
 
 networks:
-  wombat-net:
+  wombat-net-legacy:

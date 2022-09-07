@@ -7,14 +7,14 @@
     @swiper="onSwiper"
     @slideChange="onSlideChange"
   >
-    <SwiperSlide v-for="(news, index) in mock_news"
-                 :key="news.id"
+    <SwiperSlide v-for="(bulletin, index) in lastSixBulletins"
+                 :key="bulletin.bulletin_id"
                  :virtualIndex="index">
       <SimpleNews
-        :date=news.date
-        :title=news.title
-        :description=news.description
-        :link=news.link
+        :date=bulletin.bulletin_date
+        :title=bulletin.bulletin_title
+        :description=bulletin.bulletin_text
+        :link=bulletin.link
       ></SimpleNews>
     </SwiperSlide>
   </Swiper>
@@ -64,6 +64,11 @@ export default {
     Swiper,
     SwiperSlide,
     SimpleNews
+  },
+  computed: {
+    lastSixBulletins() {
+      return this.$store.getters['bulletins/lastSixBulletins'];
+    }
   },
   setup() {
     const onSwiper = (swiper) => {
