@@ -1,5 +1,6 @@
 <template>
-  <div class="spa-content">
+  <div>
+
     <h2>CVW-22</h2>
     <UnderConstruction></UnderConstruction>
   </div>
