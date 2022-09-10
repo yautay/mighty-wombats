@@ -7,8 +7,8 @@
       <div class="content_element news_description">
         <p>{{ description_cut }}</p></div>
       <div class="content_element news_link tinos">
-        <a v-bind:href="link">Czytaj więcej&nbsp;&nbsp;<font-awesome-icon class="caret-fa"
-                                                                          icon="fa-solid fa-caret-right"/>
+        <a v-bind:href="this.bulletin_url + link">Czytaj więcej&nbsp;&nbsp;<font-awesome-icon class="caret-fa"
+                                                                                              icon="fa-solid fa-caret-right" />
         </a>
 
       </div>
@@ -17,19 +17,20 @@
 </template>
 
 <script>
-import {monthToPolish} from "@/js/month-to-polish";
-import {Swiper, SwiperSlide} from "swiper/vue";
+import { monthToPolish } from "@/js/month-to-polish";
+import { Swiper, SwiperSlide } from "swiper/vue";
 
 export default {
   name: "SimpleNews",
   props: ["date", "title", "description", "link"],
   data() {
     return {
-      description_cut: this.description.split(/\s+/).slice(0, 30).join(' ') + ' [...]'
-    }
+      description_cut: this.description.split(/\s+/).slice(0, 30).join(" ") + " [...]",
+      bulletin_url: window.location.origin + "/bulletins/?id="
+    };
   },
   methods: {
-    getDateFormated: function (date) {
+    getDateFormated: function(date) {
       const dateParts = date.split("-");
       const day = dateParts[2];
       const month = monthToPolish(dateParts[1]);

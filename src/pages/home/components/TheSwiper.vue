@@ -7,14 +7,14 @@
     @swiper="onSwiper"
     @slideChange="onSlideChange"
   >
-    <SwiperSlide v-for="(bulletin, index) in lastSixBulletins"
-                 :key="bulletin.bulletin_id"
+    <SwiperSlide v-for="(bulletins, index) in lastFiveBulletins"
+                 :key="bulletins.bulletin_id"
                  :virtualIndex="index">
       <SimpleNews
-        :date=bulletin.bulletin_date
-        :title=bulletin.bulletin_title
-        :description=bulletin.bulletin_text
-        :link=bulletin.link
+        :date=bulletins.bulletin_date
+        :title=bulletins.bulletin_title
+        :description=bulletins.bulletin_text
+        :link=bulletins.bulletin_id
       ></SimpleNews>
     </SwiperSlide>
   </Swiper>
@@ -30,80 +30,61 @@ import "swiper/scss/pagination";
 
 export default {
   name: "TheSwiper",
-  data() {
-    return {
-      mock_news: [
-        {
-          date: "2022-03-11",
-          title: "TEST Q1 2022 Report",
-          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
-          link: "https://www.dotcom-tools.com/website-speed-test"
-        },
-        {
-          date: "2021-12-23",
-          title: "TEST Q2 Ciach Ciach",
-          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
-          link: "https://www.dotcom-tools.com/website-speed-test"
-        },
-        {
-          date: "2021-07-01",
-          title: "TEST Q3 WowWowWow",
-          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
-          link: "https://www.dotcom-tools.com/website-speed-test"
-        },
-        {
-          date: "2021-02-01",
-          title: "TEST Q4 123'asd",
-          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
-          link: "https://www.dotcom-tools.com/website-speed-test"
-        }]
-
-    };
-  },
   components: {
     Swiper,
     SwiperSlide,
     SimpleNews
   },
+  created() {
+     this.fetchBulletins();
+  },
   computed: {
-    lastSixBulletins() {
-      return this.$store.getters['bulletins/lastSixBulletins'];
+    lastFiveBulletins() {
+      return this.$store.getters["bulletins/getLastFiveBulletins"];
+    }
+  },
+  methods: {
+    fetchBulletins() {
+      this.$store.dispatch("bulletins/fetchLastFiveBulletins");
     }
   },
   setup() {
     const onSwiper = (swiper) => {
       console.log(swiper);
     };
-    const onSlideChange = () => {};
+    const onSlideChange = () => {
+    };
     return {
       onSwiper,
       onSlideChange,
       pagination: {
-        clickable: true,
+        clickable: true
       },
-      modules: [Pagination],
+      modules: [Pagination]
     };
   }
 };
 
 </script>
-<style  lang="scss">
+<style lang="scss">
 .swiper {
   height: 100%;
 }
+
 .swiper-slide {
   display: flex;
   flex-wrap: nowrap;
   background: none;
 }
-.swiper-pagination{
+
+.swiper-pagination {
   margin-bottom: $footer_height_desktop + 170px;
   @media screen and (max-width: $desktop) {
     margin-bottom: $footer_height_mobile + 170px;
   }
 }
-.swiper-pagination-bullet
- {
+
+.swiper-pagination-bullet {
   width: 10px;
   height: 10px;
   text-align: center;
@@ -118,7 +99,6 @@ export default {
   color: #fff;
   background: #ffffff;
 }
-
 
 
 </style>

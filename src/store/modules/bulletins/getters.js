@@ -1,9 +1,8 @@
 export default {
-  bulletins(state) {
+  getBulletins(state) {
     return state.bulletins;
   },
-  lastSixBulletins(state) {
-    return state.bulletins
+  getLastFiveBulletins(state) {
+    return state.bulletins.slice(0, 5);
   }
-
 }
