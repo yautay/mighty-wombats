@@ -24,6 +24,7 @@
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Pagination } from "swiper";
 import SimpleNews from "@/pages/home/components/SimpleNews";
+
 // Import Swiper styles
 import "swiper/scss";
 import "swiper/scss/pagination";
@@ -44,8 +45,14 @@ export default {
     }
   },
   methods: {
-    fetchBulletins() {
-      this.$store.dispatch("bulletins/fetchBulletins");
+    async fetchBulletins() {
+      function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+      }
+      this.$store.dispatch("homeLoading/isLoading");
+      await this.$store.dispatch("bulletins/fetchBulletins");
+      sleep(2000).then(() => {
+      this.$store.dispatch("homeLoading/isNotLoading")});
     }
   },
   setup() {
@@ -67,6 +74,10 @@ export default {
 
 </script>
 <style lang="scss">
+.spinner {
+  position: sticky;
+}
+
 .swiper {
   height: 100%;
 }
