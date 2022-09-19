@@ -45,7 +45,7 @@ export default {
   },
   methods: {
     fetchBulletins() {
-      this.$store.dispatch("bulletins/fetchLastFiveBulletins");
+      this.$store.dispatch("bulletins/fetchBulletins");
     }
   },
   setup() {
