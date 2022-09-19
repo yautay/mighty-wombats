@@ -1,8 +1,10 @@
 import axios from "axios";
+import * as dotenv from 'dotenv'
+dotenv.config()
 
 export default {
   fetchBulletins(context) {
-    const baseURL = "http://localhost:3000/bulletins-management/bulletins";
+    const baseURL = process.env.WOMBATS_API_URI + "/bulletins-management/bulletins";
     axios
       .get(baseURL)
       .then(response => {
@@ -13,7 +15,7 @@ export default {
       });
   },
   fetchLastFiveBulletins(context) {
-    const baseURL = "http://localhost:3000/bulletins-management/bulletins?last=5";
+    const baseURL = process.env.WOMBATS_API_URI + "/bulletins-management/bulletins?last=5";
     axios
       .get(baseURL)
       .then(response => {
