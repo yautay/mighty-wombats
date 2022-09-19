@@ -15,9 +15,10 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Tinos:wght@700&display=swap');
+@import "./scss/colours.scss";
 
 /*MAYER RESET*/
 
@@ -85,7 +86,13 @@ body {
   display: block;
   position: absolute;
   color: transparent;
+}
 
+.wombat_line {
+  height: 5px;
+  width: 150px;
+  background-color: $wombat_yellow;
+  margin: 30px 0 30px;
 }
 
 

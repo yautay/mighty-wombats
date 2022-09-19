@@ -2,6 +2,7 @@
   <div class="simple_news">
     <div class="content_block">
       <div class="content_element news_date tinos">{{ getDateFormated(date) }}</div>
+      <div class="wombat_line"></div>
       <div class="content_element news_title tinos">
         <h3>{{ title }}</h3></div>
       <div class="content_element news_description">
@@ -76,18 +77,10 @@ export default {
 
 
     .news_date {
-      height: 5rem;
-      padding-bottom: 1rem;
       font-size: 1.5rem;
-      text-decoration: underline;
-      text-underline-offset: 2rem;
-      text-decoration-thickness: 5px;
-      text-decoration-color: $wombat_yellow;
-
     }
 
     .news_title {
-      height: 2rem;
       font-size: 2rem;
 
     }
