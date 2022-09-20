@@ -30,7 +30,7 @@ const router = createRouter(
           { path: "/flights", component: RegisterFlight },
           { path: "/commander", component: BossZone }]
       },
-      { path: "/:notFound(.*)", component: NotFound }
+      { path: "/:notFound(.*)", component: NotFound },
     ],
     scrollBehavior(to, from, savedPosition) {
       if (to.hash) {
